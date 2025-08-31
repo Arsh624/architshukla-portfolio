@@ -29,14 +29,14 @@ const projects: Project[] = [
   {
   id: 2,
   title: "Archit Shukla – Personal Portfolio",
-  url: "https://archit-portfolio.vercel.app/", // use your deployed URL once it's live
+  url: "https://architshukla-portfolio.vercel.app/", // use your deployed URL once it's live
   date: "2025",
   role: "Full Stack / Frontend",
   description:
     "Designed and developed my interactive portfolio using React, Vite, Tailwind CSS, and Three.js.",
   fullDescription:
     "This is a fully custom-built, responsive portfolio that highlights my work, background, and technical skills. It’s powered by React with TypeScript, styled using Tailwind CSS, and includes advanced UI/UX with animations, Three.js generative visuals, and smooth page transitions. Hosted on Vercel with a GitHub-based CI/CD pipeline.",
-  githubUrl: "https://github.com/Arsh624/archit-portfolio" // replace with your actual repo
+  githubUrl: "https://github.com/Arsh624/architshukla-portfolio" // replace with your actual repo
   },
   {
     id: 3,
