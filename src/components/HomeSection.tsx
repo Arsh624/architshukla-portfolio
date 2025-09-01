@@ -43,26 +43,26 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
         </nav>
 
         <div className="flex justify-end mt-6">
-          <div className="text-right text-sm text-muted-foreground leading-relaxed font-mono max-w-xs stagger-in pr-2 md:pr-4 lg:pr-6">
-            <div className="space-y-1">
-              <p>Code is not just logic,</p>
-              <p>it's expression-</p>
-              <p>a way to shape the world.</p>
-              <br />
-              <p>It bridges thoughts,</p>
-              <p>builds tools,</p>
-              <p>and turns vision into reality.</p>
-              <br />
-              <p>Each line a decision,</p>
-              <p>each bug a lesson,</p>
-              <p>each product a conversation.</p>
-              <br />
-              <p>I don’t just write code-</p>
-              <p>I craft experiences</p>
-              <p>that matter.</p>
-            </div>
-          </div>
-        </div>
+  <div className="text-right text-sm text-muted-foreground leading-relaxed font-mono max-w-xs stagger-in pr-2 md:pr-4 lg:pr-6">
+    <div className="space-y-1">
+      <p>Code isn’t just logic</p>
+      <p>It’s expression</p>
+      <br />
+      <p>It connects thoughts</p>
+      <p>builds tools</p>
+      <p>solves problems</p>
+      <br />
+      <p>Each line a choice</p>
+      <p>each bug a lesson</p>
+      <p>each project a story</p>
+      <br />
+      <p>Don’t just code</p>
+      <p>Design experiences</p>
+      <p>that matter</p>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   );
