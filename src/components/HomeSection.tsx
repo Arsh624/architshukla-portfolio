@@ -52,8 +52,7 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
       <p>builds tools</p>
       <p>solves problems</p>
       <br />
-      <p>Each line a choice</p>
-      <p>each bug a lesson</p>
+      <p>Each bug a lesson</p>
       <p>each project a story</p>
       <br />
       <p>Don’t just code</p>
