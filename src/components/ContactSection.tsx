@@ -59,7 +59,7 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
                 LinkedIn
               </a>
               <a 
-                href="https://github.com/architshukla" 
+                href="https://github.com/Arsh624" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-base text-muted-foreground hover:text-foreground transition-colors"
