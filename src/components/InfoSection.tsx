@@ -139,7 +139,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
 
     <div>
       <h3 className="text-base font-medium text-foreground">
-        Artificial Intelligence Intern
+        Software Engineering Intern – AI/ML Focus
       </h3>
       <p className="text-sm text-muted-foreground font-mono mb-2">
         CodeClause / Bangalore, India / 2024
@@ -151,7 +151,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
 
     <div>
       <h3 className="text-base font-medium text-foreground">
-        Mentor & Instructor
+        Programming Instructor – Data Science/AI Track
       </h3>
       <p className="text-sm text-muted-foreground font-mono mb-2">
         EdBhoomi / Bangalore, India / 2023
@@ -163,7 +163,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
 
     <div>
       <h3 className="text-base font-medium text-foreground">
-        Data Science Intern
+        Data Engineering Intern
       </h3>
       <p className="text-sm text-muted-foreground font-mono mb-2">
         Adflix Media / Pune, India / 2023
