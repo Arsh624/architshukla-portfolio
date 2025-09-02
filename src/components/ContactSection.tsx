@@ -85,7 +85,7 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
           Availability
         </h3>
         <p className="text-base text-muted-foreground leading-relaxed">
-          Actively seeking full-time Software Engineer (SWE) and Software Development Engineer (SDE) opportunities for a May or June 2026 startActively seeking full-time Software Engineer (SWE), Software Development Engineer (SDE), Machine Learning Engineer (MLE), and Data Scientist opportunities for a May or June 2026 start.
+          Actively seeking full-time opportunities as a Software Engineer (SWE), Software Development Engineer (SDE), Machine Learning Engineer (MLE), or Data Scientist, starting in May or June 2026.
           
         </p>
       </section>
