@@ -4,41 +4,41 @@ interface ContactSectionProps {
 
 const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
   return (
-    <div className="fade-in p-6">
+    <div className="fade-in p-6" style={{ backgroundColor: '#1a1a1a', minHeight: '100vh' }}>
       <div className="flex items-center mb-8">
         <button
           onClick={() => onSectionChange('home')}
-          className="mr-4 p-2 text-muted-foreground hover:text-foreground transition-colors duration-300"
+          className="mr-4 p-2 text-white hover:text-gray-200 transition-colors duration-300"
           aria-label="Back to home"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
-        <h2 className="text-3xl font-light text-foreground stagger-in">Get In Touch</h2>
+        <h2 className="text-3xl font-light text-white stagger-in">Get In Touch</h2>
       </div>
       
       <div className="space-y-12 max-w-2xl">{/* Contact Info */}
       <section>
-        <h2 className="text-xl font-light text-foreground mb-8 font-display">
+        <h2 className="text-xl font-light text-white mb-8 font-display">
           Let's Connect
         </h2>
         
         <div className="space-y-6">
           <div>
-            <h3 className="text-sm font-medium text-foreground mb-2 uppercase tracking-wider">
+            <h3 className="text-sm font-medium text-white mb-2 uppercase tracking-wider">
               Email
             </h3>
             <a 
               href="mailto:arsh9532@colorado.edu" 
-              className="text-base text-muted-foreground hover:text-foreground transition-colors"
+              className="text-base text-white hover:text-gray-200 transition-colors"
             >
               arsh9532@colorado.edu
             </a>
           </div>
           
           <div>
-            <h3 className="text-sm font-medium text-foreground mb-2 uppercase tracking-wider">
+            <h3 className="text-sm font-medium text-white mb-2 uppercase tracking-wider">
               Social
             </h3>
             <div className="space-y-2">
@@ -46,7 +46,7 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
                 href="https://twitter.com/architshukla" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-base text-muted-foreground hover:text-foreground transition-colors"
+                className="block text-base text-white hover:text-gray-200 transition-colors"
               >
                 Twitter
               </a> */}
@@ -54,7 +54,7 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
                 href="https://linkedin.com/in/archit-shukla06" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-base text-muted-foreground hover:text-foreground transition-colors"
+                className="block text-base text-white hover:text-gray-200 transition-colors"
               >
                 LinkedIn
               </a>
@@ -62,7 +62,7 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
                 href="https://github.com/Arsh624" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-base text-muted-foreground hover:text-foreground transition-colors"
+                className="block text-base text-white hover:text-gray-200 transition-colors"
               >
                 GitHub
               </a>
@@ -70,7 +70,7 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
                 href="https://www.kaggle.com/archit258" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-base text-muted-foreground hover:text-foreground transition-colors"
+                className="block text-base text-white hover:text-gray-200 transition-colors"
               >
                 Kaggle
               </a>
@@ -81,10 +81,10 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
 
       {/* Availability */}
       <section>
-        <h3 className="text-sm font-medium text-foreground mb-3 uppercase tracking-wider">
+        <h3 className="text-sm font-medium text-white mb-3 uppercase tracking-wider">
           Availability
         </h3>
-        <p className="text-base text-muted-foreground leading-relaxed">
+        <p className="text-base text-white leading-relaxed">
           Actively seeking full-time opportunities as a Software Engineer (SWE), Software Development Engineer (SDE), Machine Learning Engineer (MLE), or Data Scientist, starting in May or June 2026.
           
         </p>
@@ -92,10 +92,10 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
 
       {/* Location */}
       <section>
-        <h3 className="text-sm font-medium text-foreground mb-3 uppercase tracking-wider">
+        <h3 className="text-sm font-medium text-white mb-3 uppercase tracking-wider">
           Location
         </h3>
-        <p className="text-base text-muted-foreground">
+        <p className="text-base text-white">
           Boulder, Colorado<br />
           Available for relocation for Full-time work across US and also remote work worldwide.
         </p>

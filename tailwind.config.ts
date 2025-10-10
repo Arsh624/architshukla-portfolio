@@ -70,7 +70,8 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 				mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'monospace'],
-				display: ['Inter', 'system-ui', 'sans-serif']
+				display: ['Inter', 'system-ui', 'sans-serif'],
+				montserrat: ['Montserrat', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

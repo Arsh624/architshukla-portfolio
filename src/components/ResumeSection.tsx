@@ -16,11 +16,11 @@ const ResumeSection = ({ onSectionChange }: ResumeSectionProps) => {
       : null;
 
   return (
-    <div className="fade-in p-6 min-h-screen">
+    <div className="fade-in p-6 min-h-screen" style={{ backgroundColor: '#1a1a1a', minHeight: '100vh' }}>
       <div className="flex items-center mb-8">
         <button
           onClick={() => onSectionChange("home")}
-          className="mr-4 p-2 text-muted-foreground hover:text-foreground transition-colors duration-300"
+          className="mr-4 p-2 text-white hover:text-gray-200 transition-colors duration-300"
           aria-label="Back to home"
         >
           <svg
@@ -39,7 +39,7 @@ const ResumeSection = ({ onSectionChange }: ResumeSectionProps) => {
             />
           </svg>
         </button>
-        <h2 className="text-3xl font-light text-foreground stagger-in">Resume</h2>
+        <h2 className="text-3xl font-light text-white stagger-in">Resume</h2>
       </div>
 
       <div className="max-w-4xl mx-auto">
@@ -53,19 +53,19 @@ const ResumeSection = ({ onSectionChange }: ResumeSectionProps) => {
               transition={{ duration: 0.5 }}
               className="text-center bg-card rounded-lg p-8 shadow-sm border border-border"
             >
-              <h3 className="text-xl font-light mb-4 text-muted-foreground">
+              <h3 className="text-xl font-light mb-4 text-white">
                 Choose a role
               </h3>
               <div className="flex flex-col md:flex-row justify-center gap-6">
                 <button
                   onClick={() => setSelectedRole("swe")}
-                  className="px-6 py-3 rounded-md text-sm font-medium bg-muted text-muted-foreground hover:bg-muted/70 transition-colors"
+                  className="px-6 py-3 rounded-md text-sm font-medium bg-gray-800 text-white hover:bg-gray-700 transition-colors"
                 >
                   Software Engineer
                 </button>
                 <button
                   onClick={() => setSelectedRole("ml")}
-                  className="px-6 py-3 rounded-md text-sm font-medium bg-muted text-muted-foreground hover:bg-muted/70 transition-colors"
+                  className="px-6 py-3 rounded-md text-sm font-medium bg-gray-800 text-white hover:bg-gray-700 transition-colors"
                 >
                   Data & Machine Learning
                 </button>
@@ -80,7 +80,7 @@ const ResumeSection = ({ onSectionChange }: ResumeSectionProps) => {
               transition={{ duration: 0.5 }}
               className="bg-card rounded-lg p-8 shadow-sm border border-border"
             >
-              <div className="text-center text-muted-foreground mb-6">
+              <div className="text-center text-white mb-6">
                 <h3 className="text-xl font-light mb-2">
                   {selectedRole === "swe"
                     ? "Software Engineering Resume"
@@ -105,7 +105,7 @@ const ResumeSection = ({ onSectionChange }: ResumeSectionProps) => {
                 <a
                   href={resumeFile || "#"}
                   download
-                  className="inline-block text-sm text-blue-500 hover:underline"
+                  className="inline-block text-sm text-blue-400 hover:underline"
                 >
                   Download PDF
                 </a>
@@ -114,7 +114,7 @@ const ResumeSection = ({ onSectionChange }: ResumeSectionProps) => {
               <div className="text-center mt-6">
                 <button
                   onClick={() => setSelectedRole(null)}
-                  className="text-xs text-muted-foreground hover:text-foreground"
+                  className="text-xs text-white hover:text-gray-200"
                 >
                   ← Back to role selection
                 </button>

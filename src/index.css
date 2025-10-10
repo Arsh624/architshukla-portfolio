@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,23 +8,23 @@
 
 @layer base {
   :root {
-    /* Base Colors - Cream Theme */
-    --background: 36 44% 91%;
-    --foreground: 0 0% 0%;
-    --surface: 36 44% 89%;
-    --surface-muted: 36 44% 87%;
+    /* Base Colors - Dark Theme */
+    --background: 0 0% 10%;
+    --foreground: 0 0% 100%;
+    --surface: 0 0% 12%;
+    --surface-muted: 0 0% 14%;
 
     
     /* Content Areas */
-    --card: 36 44% 91%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 36 44% 91%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Primary - Elegant Black */
-    --primary: 0 0% 0%;
-    --primary-foreground: 36 44% 91%;
+    /* Primary - Elegant White */
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 10%;
 
     /* Secondary - Subtle Gray */
     --secondary: 0 0% 35%;
@@ -126,8 +126,18 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply text-foreground font-sans antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #1a1a1a;
+  }
+
+  html {
+    background-color: #1a1a1a;
+  }
+
+  #root {
+    background-color: #1a1a1a;
+    min-height: 100vh;
   }
 
   /* Typography Classes */
@@ -193,7 +203,7 @@
   }
 
   .intro-fade-out {
-    animation: slideOutLeft 0.8s ease-in-out forwards;
+    animation: fadeOut 0.8s ease-in-out forwards;
   }
 
   @keyframes slideInUp {
@@ -207,30 +217,26 @@
     }
   }
 
-  @keyframes slideOutLeft {
+  @keyframes fadeOut {
     from {
       opacity: 1;
-      transform: translateX(0);
     }
     to {
       opacity: 0;
-      transform: translateX(-100vw);
     }
   }
 
   /* Portfolio entrance animation */
   .portfolio-enter {
-    animation: slideInRight 0.8s ease-out;
+    animation: fadeIn 0.8s ease-out;
   }
 
-  @keyframes slideInRight {
+  @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateX(100vw);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
     }
   }
 

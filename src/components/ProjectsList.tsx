@@ -98,18 +98,18 @@ const ProjectsList = ({ onSectionChange }: ProjectsListProps) => {
 
   return (
     <>
-      <div className="fade-in p-6">
+      <div className="fade-in p-6" style={{ backgroundColor: '#1a1a1a', minHeight: '100vh' }}>
         <div className="flex items-center mb-8">
           <button
             onClick={() => onSectionChange('home')}
-            className="mr-4 p-2 text-muted-foreground hover:text-foreground transition-colors duration-300"
+            className="mr-4 p-2 text-white hover:text-gray-200 transition-colors duration-300"
             aria-label="Back to home"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
-          <h2 className="text-3xl font-light text-foreground stagger-in">Projects</h2>
+          <h2 className="text-3xl font-light text-white stagger-in">Projects</h2>
         </div>
         
         <div className="space-y-12">{projects.map((project, index) => (
@@ -122,19 +122,19 @@ const ProjectsList = ({ onSectionChange }: ProjectsListProps) => {
               onClick={() => setSelectedProject(project)}
               className="project-link block text-left w-full"
             >
-              <h3 className="text-lg font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
+              <h3 className="text-lg font-medium text-white mb-2 group-hover:text-gray-200 transition-colors">
                 {project.title}
               </h3>
             </button>
             
             <div className="mb-3">
-              <p className="text-sm text-muted-foreground font-mono">
+              <p className="text-sm text-white font-mono">
                 {project.date} / {project.role}
               </p>
             </div>
             
             {project.description && (
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+              <p className="text-sm text-white leading-relaxed max-w-2xl">
                 {project.description}
               </p>
             )}
@@ -151,16 +151,16 @@ const ProjectsList = ({ onSectionChange }: ProjectsListProps) => {
               {/* Header */}
               <div className="flex justify-between items-start mb-6">
                 <div>
-                  <h2 className="text-2xl font-medium text-foreground mb-2">
+                  <h2 className="text-2xl font-medium text-white mb-2">
                     {selectedProject.title}
                   </h2>
-                  <p className="text-sm text-muted-foreground font-mono">
+                  <p className="text-sm text-white font-mono">
                     {selectedProject.date} / {selectedProject.role}
                   </p>
                 </div>
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-white hover:text-gray-200 transition-colors"
                 >
                   <X size={20} />
                 </button>
@@ -168,7 +168,7 @@ const ProjectsList = ({ onSectionChange }: ProjectsListProps) => {
 
               {/* Full Description */}
               <div className="mb-8">
-                <p className="text-base text-foreground leading-relaxed">
+                <p className="text-base text-white leading-relaxed">
                   {selectedProject.fullDescription}
                 </p>
               </div>
@@ -191,7 +191,7 @@ const ProjectsList = ({ onSectionChange }: ProjectsListProps) => {
                     href={selectedProject.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-muted text-muted-foreground rounded-md text-sm font-medium hover:text-foreground transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-md text-sm font-medium hover:bg-gray-700 transition-colors"
                   >
                     <Github size={16} />
                     View Code
