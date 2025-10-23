@@ -28,7 +28,7 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
         <div className="absolute bottom-8 right-8 hidden md:block">
           <div className="text-right text-sm text-white leading-relaxed font-mono max-w-xs stagger-in pr-2 md:pr-4 lg:pr-6">
             <div className="space-y-1">
-              <p>Code isn't just logic</p>
+              <p>saumya isn't just logic</p>
               <p>It's expression</p>
               <br />
               <p>It connects thoughts</p>
