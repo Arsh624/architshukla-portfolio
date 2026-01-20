@@ -35,7 +35,7 @@ const projects: Project[] = [
   description:
     "Designed and developed my interactive portfolio using React, Vite, Tailwind CSS, and Three.js.",
   fullDescription:
-    "This is a fully custom-built, responsive portfolio that highlights my work, background, and technical skills. It’s powered by React with TypeScript, styled using Tailwind CSS, and includes advanced UI/UX with animations, Three.js generative visuals, and smooth page transitions. Hosted on Vercel with a GitHub-based CI/CD pipeline.",
+    "This project is a custom full-stack web application built with React and Node.js, focused on clean API design and maintainable backend architecture. It handles client-side routing, request orchestration, and backend services through well-defined interfaces. The entire stack is containerized and deployed via CI/CD for reliable, reproducible builds. Backend services are organized using modular routes, versioned APIs, and baseline testing to support fast, iterative development.",
   githubUrl: "https://github.com/Arsh624/architshukla-portfolio" // replace with your actual repo
   },
   {
