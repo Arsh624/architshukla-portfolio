@@ -8,7 +8,7 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
   const sections = [
     { id: 'projects', label: 'Projects' },
     { id: 'info', label: 'About Me' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'contact', label: 'Hire Me' },
     { id: 'resume', label: 'Resume' },
   ];
 

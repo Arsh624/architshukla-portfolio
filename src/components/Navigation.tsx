@@ -10,7 +10,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
     { id: 'home', label: 'Home' },
     { id: 'projects', label: 'Projects' },
     { id: 'info', label: 'About Me' },
-    { id: 'contact', label: 'Hire me' },
+    { id: 'contact', label: 'Hire Me' },
     { id: 'resume', label: 'Resume' }
   ];
 
