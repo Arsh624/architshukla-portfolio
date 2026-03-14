@@ -10,7 +10,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
     { id: 'home', label: 'Home' },
     { id: 'projects', label: 'Projects' },
     { id: 'info', label: 'About Me' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'contact', label: 'Hire me' },
     { id: 'resume', label: 'Resume' }
   ];
 
@@ -49,7 +49,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
       {/* Footer */}
       <div className="mt-auto">
         <p className="text-xs text-muted-foreground font-mono">
-          © 2024 Archit Shukla
+          © 2026 Archit Shukla
         </p>
       </div>
     </div>

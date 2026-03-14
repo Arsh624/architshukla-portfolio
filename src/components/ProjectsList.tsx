@@ -8,85 +8,161 @@ interface Project {
   date: string;
   role: string;
   description?: string;
-  fullDescription: string;
-  githubUrl?: string; // <-- GitHub link added
+  highlights: string[];
+  githubUrl?: string;
 }
 
 const projects: Project[] = [
-  
   {
     id: 1,
-    title: "Real-Time MLOps Pipeline for Anomaly Detection",
-    url: "https://serverless-adp-dashboard-747568909341.us-central1.run.app/",
-    date: "2025",
-    role: "ML",
+    title: "TripSync – AI Multi-Agent Travel Planning System",
+    url: "https://trip-sync-ashen.vercel.app/",
+    date: "2026",
+    role: "AI Systems / Full Stack",
     description:
-      "Built a production-ready anomaly detection pipeline on GCP using Autoencoders, Pub/Sub, Firestore, and Cloud Run.",
-    fullDescription:
-      "Designed and deployed a real-time, serverless MLOps pipeline on Google Cloud to monitor data anomalies at scale. Implemented an Autoencoder model trained on normal patterns to flag outliers, with seamless integration across Pub/Sub for streaming ingestion, Firestore for real-time storage, and Streamlit for visualization. Users can dynamically adjust thresholds on a live dashboard deployed via Cloud Run.",
-    githubUrl: "https://github.com/Arsh624/TS-anomaly-detection-pipeline", 
-  },
-  {
-  id: 2,
-  title: "Archit Shukla – Personal Portfolio",
-  url: "https://architshukla-portfolio.vercel.app/", // use your deployed URL once it's live
-  date: "2025",
-  role: "Full Stack / Frontend",
-  description:
-    "Designed and developed my interactive portfolio using React, Vite, Tailwind CSS, and Three.js.",
-  fullDescription:
-    "This project is a custom full-stack web application built with React and Node.js, focused on clean API design and maintainable backend architecture. It handles client-side routing, request orchestration, and backend services through well-defined interfaces. The entire stack is containerized and deployed via CI/CD for reliable, reproducible builds. Backend services are organized using modular routes, versioned APIs, and baseline testing to support fast, iterative development.",
-  githubUrl: "https://github.com/Arsh624/architshukla-portfolio" // replace with your actual repo
+      "Multi-agent AI system that aggregates group preferences and generates optimized travel itineraries.",
+    highlights: [
+      "Collaborative travel planning platform that collects and aggregates group preferences using structured LLM workflows.",
+      "Features an agent-based architecture where modular AI components coordinate reasoning, constraint handling, and itinerary generation.",
+      "Demonstrates multi-input coordination to produce high-fidelity, structured travel plans for real-world tasks."
+    ],
+    githubUrl: "https://github.com/Arsh624/TripSync",
   },
   {
     id: 3,
-    title: "Loan Sphere – Real-Time Loan Prediction Platform",
-    url: "https://loansphere-ruby.vercel.app/",
-    date: "2025",
-    role: "Software Development/ML",
+    title: "Regime-Switching RL Model for Portfolio Optimization",
+    url: undefined,
+    date: "2026",
+    role: "Reinforcement Learning / ML Systems",
     description:
-      "Built and deployed a loan approval prediction platform trained on 17M+ records, optimized for recall and fairness.",
-    fullDescription:
-      "Developed a real-time loan approval system using 17 million+ FFIEC records, addressing severe class imbalance with targeted threshold tuning and AUC-maximization. The backend Flask model, containerized with Docker and deployed on Cloud Run, supports high-accuracy predictions while abstracting complexity behind a clean UI. The tool empowers users to interactively test approval odds in a responsive, production-grade financial interface.",
-    githubUrl: "https://github.com/Arsh624/loan-prediction-app", 
+      "Multi-agent reinforcement learning framework adapting to different market regimes.",
+    highlights: [
+      "Regime-aware reinforcement learning framework utilizing specialized PPO agents for bull, bear, and volatile market conditions.",
+      "Dynamic policy switching based on statistical regime detection using volatility clustering and rolling features.",
+      "Improved risk-adjusted performance by leveraging multi-agent architectures for specialized strategy execution."
+    ],
+    githubUrl: "https://github.com/Arsh624/Regime-switching-RL-model-for-Portfolio-Optimization",
   },
   {
     id: 4,
-    title: "Media Control Using Gesture Recognition",
+    title: "LLM4Jobs – JobPostTracker Intelligence Pipeline",
     url: undefined,
-    date: "2024",
-    role: "Software Development/ ML",
+    date: "2026",
+    role: "AI Infrastructure / Backend Systems",
     description:
-      "Built a gesture-based media controller with real-time computer vision, achieving 95% accuracy.",
-    fullDescription:
-      "Created an interactive system to control music playback using only hand gestures, recognized via webcam in real time. Combined OpenCV, Mediapipe, and PyAutoGUI in Python to support intuitive controls like play, pause, next, and previous. Achieved over 95% recognition accuracy and significantly improved user experience by removing the need for physical input devices.",
-    githubUrl: "https://github.com/Arsh624/Media-control-using-gesture-recognition", 
+      "Reliability-first job intelligence pipeline that tracks company career pages and extracts structured job data.",
+    highlights: [
+      "Production-oriented pipeline monitoring career pages and extracting structured metadata using Node.js, Puppeteer, and Python-based LLM extraction.",
+      "Robust architecture featuring snapshot diffing, job queues, inference workers, and automated email digest generation.",
+      "Engineered for high reliability with Chromium process management, concurrency controls, and watchdog timeouts."
+    ],
+    githubUrl: "https://github.com/Arsh624/llm4jobs",
+  },
+  {
+    id: 2,
+    title: "RepoGraph V2 – Distributed Debugging Platform",
+    url: undefined,
+    date: "2025",
+    role: "Distributed Systems / Backend",
+    description:
+      "Graph-based distributed system to localize flaky tests across large repositories.",
+    highlights: [
+      "Distributed debugging platform using graph closures to analyze dependency graphs and shared state across 100K+ LOC repositories.",
+      "Coordinated patching and verification workflows supported by versioned REST APIs for large-scale analysis.",
+      "Optimized graph-scoped retrieval to significantly reduce inter-service data movement and improve concurrent pipeline throughput."
+    ],
+    githubUrl: "https://github.com/Arsh624/Repograph-V2",
   },
   {
     id: 5,
-    title: "Autism Sense – Early Detection via Facial Cues",
-    url: undefined,
-    date: "2023",
-    role: "Research",
+    title: "Real-Time MLOps Pipeline for Anomaly Detection",
+    url: "https://serverless-adp-dashboard-747568909341.us-central1.run.app/",
+    date: "2025",
+    role: "ML Systems",
     description:
-      "Developed a model to identify autism-related facial cues using computer vision, achieving 90% accuracy.",
-    fullDescription:
-      "A research-driven project aiming to detect early indicators of autism spectrum disorder in children using facial imagery. Trained an EfficientNet-B3 convolutional neural network on a curated dataset to recognize subtle facial patterns associated with ASD, reaching 90% classification accuracy. The tool is designed as a low-cost, non-invasive, early screening system to support pediatric evaluations.",
-    githubUrl: "https://github.com/Arsh624/AutismSense-Early-Detection-and-Intervention", 
+      "Production-ready anomaly detection pipeline on GCP using Autoencoders, Pub/Sub, and Cloud Run.",
+    highlights: [
+      "Serverless MLOps pipeline on Google Cloud utilizing Autoencoder models for real-time anomaly detection in streaming data.",
+      "Seamless integration of Pub/Sub for ingestion, Firestore for state management, and Streamlit for live monitoring dashboards.",
+      "Scalable deployment via Cloud Run supporting dynamic threshold adjustments and performance visualization."
+    ],
+    githubUrl: "https://github.com/Arsh624/TS-anomaly-detection-pipeline",
   },
   {
     id: 6,
-    title: "Neuron Building and Implementation",
+    title: "Archit Shukla – Personal Portfolio",
+    url: "https://architshukla-portfolio.vercel.app/",
+    date: "2025",
+    role: "Full Stack / Frontend",
+    description:
+      "Interactive portfolio built with React, Vite, Tailwind CSS, and Three.js.",
+    highlights: [
+      "Custom personal portfolio showcasing projects and research using React, Vite, and Tailwind CSS for rapid, clean rendering.",
+      "Prioritizes component modularity and responsive design while integrating smooth animations and interactive UI elements.",
+      "Engineered with a focus on maintainable code structure and optimized frontend performance."
+    ],
+    githubUrl: "https://github.com/Arsh624/architshukla-portfolio",
+  },
+  {
+    id: 7,
+    title: "LoanSphere – Real-Time Loan Prediction Platform",
+    url: "https://loansphere-ruby.vercel.app/",
+    date: "2025",
+    role: "Software Development / ML",
+    description:
+      "Loan approval prediction platform trained on 17M+ financial records.",
+    highlights: [
+      "Predictive platform trained on 17M+ FFIEC records with optimized thresholding to handle severe class imbalance.",
+      "Backend powered by a containerized Flask API and Docker for highly available real-time predictions.",
+      "Responsive web interface enabling intuitive user interaction with complex financial modeling results."
+    ],
+    githubUrl: "https://github.com/Arsh624/loan-prediction-app",
+  },
+  {
+    id: 8,
+    title: "Media Control Using Gesture Recognition",
+    url: undefined,
+    date: "2024",
+    role: "Computer Vision / ML",
+    description:
+      "Gesture-based media controller using real-time computer vision.",
+    highlights: [
+      "Interactive media interface leveraging OpenCV and Mediapipe to control playback via real-time hand gesture recognition.",
+      "Supports core playback controls (play, pause, next, previous) with over 95% recognition accuracy.",
+      "Eliminates the need for physical input devices through efficient real-time CV processing and PyAutoGUI integration."
+    ],
+    githubUrl: "https://github.com/Arsh624/Media-control-using-gesture-recognition",
+  },
+  {
+    id: 9,
+    title: "Autism Sense – Early Detection via Facial Cues",
     url: undefined,
     date: "2023",
-    role: "ML",
+    role: "Research / Computer Vision",
     description:
-      "Built a custom neural network from scratch to classify skin cancer types with 92% accuracy—no ML libraries used.",
-    fullDescription:
-      "Designed and implemented an Artificial Neural Network from the ground up to classify benign and malignant skin cancer cells. Achieved 92% classification accuracy using only core Python libraries for numerical operations and visualization, avoiding frameworks like Scikit-learn, PyTorch, or TensorFlow. This project emphasized transparency in neural operations and improved interpretability of model behavior by over 80%.",
-    githubUrl: "https://github.com/Arsh624/Building-neural-network-for-skin-cancer-classification", 
+      "Computer vision model identifying autism-related facial cues with 90% accuracy.",
+    highlights: [
+      "Research project utilizing EfficientNet-B3 CNNs to identify subtle facial patterns associated with autism spectrum disorder.",
+      "Achieved 90% classification accuracy on curated datasets, demonstrating the potential for non-invasive screening tools.",
+      "Designed to support early pediatric diagnosis through low-cost, accessible computer vision technology."
+    ],
+    githubUrl: "https://github.com/Arsh624/AutismSense-Early-Detection-and-Intervention",
+  },
+  {
+    id: 10,
+    title: "Building a Neural Network from Scratch",
+    url: undefined,
+    date: "2023",
+    role: "Machine Learning",
+    description:
+      "Custom neural network implemented from scratch for skin cancer classification.",
+    highlights: [
+      "Developed a complete neural network from scratch using core Python numerical libraries without high-level ML frameworks.",
+      "Implements forward propagation, backpropagation, and custom gradient updates to classify skin cancer cells with 92% accuracy.",
+      "Deep dive into fundamental ML mechanics to improve interpretability and transparency of neural operations."
+    ],
+    githubUrl: "https://github.com/Arsh624/Building-neural-network-for-skin-cancer-classification",
   }
-
 ];
 
 interface ProjectsListProps {
@@ -166,11 +242,15 @@ const ProjectsList = ({ onSectionChange }: ProjectsListProps) => {
                 </button>
               </div>
 
-              {/* Full Description */}
+              {/* Highlights (Bullet Points) */}
               <div className="mb-8">
-                <p className="text-base text-white leading-relaxed">
-                  {selectedProject.fullDescription}
-                </p>
+                <ul className="list-disc pl-5 space-y-3">
+                  {selectedProject.highlights.map((highlight, i) => (
+                    <li key={i} className="text-base text-white leading-relaxed text-justify">
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               {/* Action Buttons */}
@@ -183,7 +263,7 @@ const ProjectsList = ({ onSectionChange }: ProjectsListProps) => {
                     className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
                   >
                     <ExternalLink size={16} />
-                    Live Demo
+                    View Demo
                   </a>
                 )}
                 {selectedProject.githubUrl && selectedProject.githubUrl.length > 0 && (

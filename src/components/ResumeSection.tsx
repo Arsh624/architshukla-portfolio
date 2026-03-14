@@ -53,21 +53,27 @@ const ResumeSection = ({ onSectionChange }: ResumeSectionProps) => {
               transition={{ duration: 0.5 }}
               className="text-center bg-card rounded-lg p-8 shadow-sm border border-border"
             >
-              <h3 className="text-xl font-light mb-4 text-white">
+              <h3 className="text-xl font-light mb-8 text-white">
                 Choose a role
               </h3>
-              <div className="flex flex-col md:flex-row justify-center gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <button
                   onClick={() => setSelectedRole("swe")}
-                  className="px-6 py-3 rounded-md text-sm font-medium bg-gray-800 text-white hover:bg-gray-700 transition-colors"
+                  className="flex flex-col items-center p-8 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-white transition-all duration-300 text-left group"
                 >
-                  Software Engineer
+                  <h4 className="text-lg font-medium text-white mb-3 group-hover:text-blue-400">Software Engineering / Systems</h4>
+                  <p className="text-sm text-gray-400 leading-relaxed text-justify">
+                    Focus: backend systems, distributed systems, infrastructure, cloud
+                  </p>
                 </button>
                 <button
                   onClick={() => setSelectedRole("ml")}
-                  className="px-6 py-3 rounded-md text-sm font-medium bg-gray-800 text-white hover:bg-gray-700 transition-colors"
+                  className="flex flex-col items-center p-8 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-white transition-all duration-300 text-left group"
                 >
-                  Data & Machine Learning
+                  <h4 className="text-lg font-medium text-white mb-3 group-hover:text-blue-400">Machine Learning / AI</h4>
+                  <p className="text-sm text-gray-400 leading-relaxed text-justify">
+                    Focus: ML systems, agents, modeling, experimentation
+                  </p>
                 </button>
               </div>
             </motion.div>
@@ -83,8 +89,8 @@ const ResumeSection = ({ onSectionChange }: ResumeSectionProps) => {
               <div className="text-center text-white mb-6">
                 <h3 className="text-xl font-light mb-2">
                   {selectedRole === "swe"
-                    ? "Software Engineering Resume"
-                    : "Data & ML Resume"}
+                    ? "Software Engineering / Systems Resume"
+                    : "Machine Learning / AI Resume"}
                 </h3>
                 <p className="text-sm">
                   View, zoom, and download my resume below.

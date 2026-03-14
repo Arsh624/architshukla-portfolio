@@ -15,7 +15,7 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
             <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
-        <h2 className="text-3xl font-light text-white stagger-in">Get In Touch</h2>
+        <h2 className="text-3xl font-light text-white stagger-in">Hire Me</h2>
       </div>
       
       <div className="space-y-12 max-w-2xl">{/* Contact Info */}
@@ -29,12 +29,20 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
             <h3 className="text-sm font-medium text-white mb-2 uppercase tracking-wider">
               Email
             </h3>
-            <a 
-              href="mailto:arsh9532@colorado.edu" 
-              className="text-base text-white hover:text-gray-200 transition-colors"
-            >
-              arsh9532@colorado.edu
-            </a>
+            <div className="space-y-2">
+              <a 
+                href="mailto:Archit.Shukla@colorado.edu" 
+                className="block text-base text-white hover:text-gray-200 transition-colors"
+              >
+                Archit.Shukla@colorado.edu
+              </a>
+              <a 
+                href="mailto:architshukla546@gmail.com" 
+                className="block text-base text-white hover:text-gray-200 transition-colors"
+              >
+                architshukla546@gmail.com
+              </a>
+            </div>
           </div>
           
           <div>
@@ -42,16 +50,8 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
               Social
             </h3>
             <div className="space-y-2">
-              {/* <a 
-                href="https://twitter.com/architshukla" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block text-base text-white hover:text-gray-200 transition-colors"
-              >
-                Twitter
-              </a> */}
               <a 
-                href="https://linkedin.com/in/archit-shukla06" 
+                href="https://www.linkedin.com/in/archit-shukla06/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-base text-white hover:text-gray-200 transition-colors"
@@ -85,8 +85,17 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
           Availability
         </h3>
         <p className="text-base text-white leading-relaxed">
-          Actively seeking full-time opportunities as a Software Engineer (SWE), Software Development Engineer (SDE), Machine Learning Engineer (MLE), or Data Scientist, starting in May or June 2026.
-          
+          Actively seeking full-time roles starting May–June 2026 across Software Engineering (SWE/SDE), Machine Learning Engineering, AI Infrastructure/Systems, Cloud & Distributed Systems, and Embedded/Hardware-adjacent software.
+        </p>
+      </section>
+
+      {/* Work Authorization */}
+      <section>
+        <h3 className="text-sm font-medium text-white mb-3 uppercase tracking-wider">
+          Work Authorization
+        </h3>
+        <p className="text-base text-white leading-relaxed">
+          I’m on an F‑1 visa and fully authorized to work in the U.S. for up to 3 years through OPT/STEM OPT without requiring employer sponsorship during that period.
         </p>
       </section>
 
