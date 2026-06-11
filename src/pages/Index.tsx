@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import LoadingScreen from '../components/LoadingScreen';
 import HomeSection from '../components/HomeSection';
-import ProjectsList from '../components/ProjectsList';
-import InfoSection from '../components/InfoSection';
+import WorkSection from '../components/WorkSection';
 import ContactSection from '../components/ContactSection';
 import ResumeSection from '../components/ResumeSection';
 
@@ -24,10 +23,8 @@ const Index = () => {
     switch (activeSection) {
       case 'home':
         return <HomeSection onSectionChange={handleSectionChange} />;
-      case 'projects':
-        return <ProjectsList onSectionChange={handleSectionChange} />;
-      case 'info':
-        return <InfoSection onSectionChange={handleSectionChange} />;
+      case 'work':
+        return <WorkSection onSectionChange={handleSectionChange} />;
       case 'contact':
         return <ContactSection onSectionChange={handleSectionChange} />;
       case 'resume':

@@ -10,12 +10,26 @@ interface Project {
   description?: string;
   highlights: string[];
   githubUrl?: string;
+  previewImage?: string;
 }
 
 const projects: Project[] = [
   {
+    id: 11,
+    title: "Multi-Agent Relationship Intelligence Platform",
+    date: "2026",
+    role: "AI Engineering / Full Stack",
+    description: "Multimodal relationship intelligence platform that automatically extracts, enriches, and organizes contacts into a dynamic knowledge graph.",
+    highlights: [
+      "Built a multimodal pipeline extracting and organizing 1,000+ entities from emails, documents, business cards, and meeting notes into a live knowledge graph.",
+      "Designed LangGraph-based multi-agent workflows for contact extraction, relationship mapping, follow-up generation, and contextual retrieval, reducing manual networking effort by 80%.",
+      "Engineered JWT-secured FastAPI services backed by PostgreSQL, Neo4j, and Qdrant, implementing RAG, vector search, and agent observability pipelines deployed with Docker and AWS.",
+    ],
+  },
+  {
     id: 1,
     title: "TripSync – AI Multi-Agent Travel Planning System",
+    previewImage: "/projects/Tripsync.png",
     url: "https://trip-sync-ashen.vercel.app/",
     date: "2026",
     role: "AI Systems / Full Stack",
@@ -76,6 +90,7 @@ const projects: Project[] = [
   {
     id: 5,
     title: "Real-Time MLOps Pipeline for Anomaly Detection",
+    previewImage: "/projects/mlops-anomaly.png",
     url: "https://serverless-adp-dashboard-747568909341.us-central1.run.app/",
     date: "2025",
     role: "ML Systems",
@@ -106,6 +121,7 @@ const projects: Project[] = [
   {
     id: 7,
     title: "LoanSphere – Real-Time Loan Prediction Platform",
+    previewImage: "/projects/Loansphere.png",
     url: "https://loansphere-ruby.vercel.app/",
     date: "2025",
     role: "Software Development / ML",
@@ -121,6 +137,7 @@ const projects: Project[] = [
   {
     id: 8,
     title: "Media Control Using Gesture Recognition",
+    previewImage: "/projects/gesture.png",
     url: undefined,
     date: "2024",
     role: "Computer Vision / ML",
@@ -167,53 +184,71 @@ const projects: Project[] = [
 
 interface ProjectsListProps {
   onSectionChange: (section: string) => void;
+  embedded?: boolean;
 }
 
-const ProjectsList = ({ onSectionChange }: ProjectsListProps) => {
+const ProjectsList = ({ onSectionChange, embedded = false }: ProjectsListProps) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <>
       <div className="fade-in p-6" style={{ backgroundColor: '#1a1a1a', minHeight: '100vh' }}>
-        <div className="flex items-center mb-8">
-          <button
-            onClick={() => onSectionChange('home')}
-            className="mr-4 p-2 text-white hover:text-gray-200 transition-colors duration-300"
-            aria-label="Back to home"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
-          <h2 className="text-3xl font-light text-white stagger-in">Projects</h2>
-        </div>
-        
-        <div className="space-y-12">{projects.map((project, index) => (
-          <div 
-            key={project.id} 
-            className="group"
-            style={{ animationDelay: `${index * 0.1}s` }}
-          >
+        {!embedded && (
+          <div className="flex items-center mb-8">
             <button
-              onClick={() => setSelectedProject(project)}
-              className="project-link block text-left w-full"
+              onClick={() => onSectionChange('home')}
+              className="mr-4 p-2 text-white hover:text-gray-200 transition-colors duration-300"
+              aria-label="Back to home"
             >
-              <h3 className="text-lg font-medium text-white mb-2 group-hover:text-gray-200 transition-colors">
-                {project.title}
-              </h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </button>
-            
-            <div className="mb-3">
-              <p className="text-sm text-white font-mono">
-                {project.date} / {project.role}
-              </p>
-            </div>
-            
-            {project.description && (
-              <p className="text-sm text-white leading-relaxed max-w-2xl">
-                {project.description}
-              </p>
+            <h2 className="text-3xl font-light text-white stagger-in">Projects</h2>
+          </div>
+        )}
+        
+        <div className="grid grid-cols-1 gap-4">{projects.map((project, index) => (
+          <div
+            key={project.id}
+            className="group border border-white/10 rounded-lg overflow-hidden hover:border-white/25 transition-all duration-300"
+            style={{ animationDelay: `${index * 0.1}s`, backgroundColor: '#222222' }}
+          >
+            {project.previewImage && (
+              <button
+                onClick={() => setSelectedProject(project)}
+                className="block w-full overflow-hidden"
+              >
+                <img
+                  src={project.previewImage}
+                  alt={`${project.title} preview`}
+                  className="w-full h-44 object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                />
+              </button>
             )}
+
+            <div className="p-5">
+              <button
+                onClick={() => setSelectedProject(project)}
+                className="project-link block text-left w-full"
+              >
+                <h3 className="text-lg font-medium text-white mb-2 group-hover:text-gray-200 transition-colors">
+                  {project.title}
+                </h3>
+              </button>
+
+              <div className="mb-3">
+                <p className="text-sm text-white font-mono">
+                  {project.date} / {project.role}
+                </p>
+              </div>
+
+              {project.description && (
+                <p className="text-sm text-white/70 leading-relaxed">
+                  {project.description}
+                </p>
+              )}
+            </div>
           </div>
         ))}
         </div>
