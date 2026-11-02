@@ -17,6 +17,8 @@ const projects: Project[] = [
   {
     id: 11,
     title: "Kith – Multi-Agent AI Platform",
+    previewImage: "/projects/kith.webp",
+    url: "https://kith-1a3z.onrender.com/",
     date: "2026",
     role: "AI Engineering / Full Stack",
     description: "Multi-agent relationship intelligence platform that extracts, enriches, and organizes contacts into a live knowledge graph, served through a provider-agnostic inference gateway.",
