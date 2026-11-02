@@ -70,8 +70,8 @@ const projects: Project[] = [
       "Multi-agent reinforcement learning framework that routes between specialist PPO agents by market regime.",
     highlights: [
       "Built three specialist PPO agents for calm, shaky, and crisis markets, each trained with a regime-specific reward (Sortino, Differential Sharpe, risk parity), routed each day by a 3-state HMM regime detector.",
-      "Raised Sharpe from 0.82 to 1.17 and cut max drawdown from 40.2% to 16.1% on 2018–2021 sector-ETF test data, and COVID-crash loss from 29.4% to 6.6%.",
-      "Owned the full RL side: Gymnasium environment, reproduction of a published single-agent baseline (Sharpe 0.82 vs 0.83), reward design, and the router. Built with a teammate who built the HMM regime detector.",
+      "Raised Sharpe from 0.82 to 1.41 (a 72% improvement) and cut max drawdown from 29.6% to 16.2% on 9 sector ETFs over a 2018–2022 test window that includes the COVID crash, beating mean-variance optimization (Sharpe 0.14) and equal weight (0.74).",
+      "Owned the full RL side: Gymnasium environment, reproduction of a published single-agent baseline (Sharpe 0.82 vs 0.83), reward design, and the router. Built with a teammate who built the HMM regime detector. Written up as a paper.",
     ],
     githubUrl: "https://github.com/Arsh624/Regime-switching-RL-model-for-Portfolio-Optimization",
   },
@@ -101,7 +101,8 @@ const projects: Project[] = [
     highlights: [
       "Modeled a distributed Python and C++ backend on Linux that builds call and dependency graphs over 100K+ LOC repositories, localizing order-dependent flaky tests caused by shared state under multiprocess load.",
       "Slashed inter-service data transfer 70–85% by scoping retrieval to each call graph and switching to a tighter serialization format.",
-      "Launched a three-agent localize, patch, verify loop over real open source repositories that accepts a fix only after 20 randomized test runs.",
+      "Built an LLM repair loop (detect, localize, patch, verify) that accepts a fix only if the test stays stable across many randomized orders; paired with iPFlakies it raised order-dependent flaky test coverage from 33% to 56.6% on a 537-test corpus, fixing 129 tests rule-based repair could not touch.",
+      "Graph-guided localization lifted LLM repairs from 21.4% to 33.5% and shrank prompts 30–40%, with zero regressions on GPT-5. Written up as a paper with a teammate.",
     ],
     githubUrl: "https://github.com/Arsh624/Repograph-V2",
   },
