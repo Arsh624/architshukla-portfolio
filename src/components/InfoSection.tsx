@@ -37,15 +37,15 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
           <div className="flex-1">
             <div className="prose prose-sm max-w-none">
 <p className="text-base text-white leading-relaxed mb-6 text-justify">
-  I’m a Computer Science graduate student at the University of Colorado Boulder graduating in May 2026 and fully authorised to work in the US, who enjoys building systems that actually work in the real world. Most of my interests sit at the intersection of backend engineering, distributed systems, and practical AI applications.
+  I’m a Computer Science graduate (M.S., University of Colorado Boulder, May 2026), fully authorized to work in the US, who enjoys building systems that actually work in the real world. Most of my interests sit at the intersection of LLM inference, GPU and distributed systems, and backend engineering.
 </p>
 
 <p className="text-base text-white leading-relaxed mb-6 text-justify">
-  Lately I’ve been building things like multi-agent systems, RAG pipelines, and backend platforms that integrate LLMs into real workflows. I enjoy working across the stack - designing APIs, building data pipelines, and making systems reliable once they move beyond prototypes and into production. I also actively use modern AI development tools to speed up repetitive work, while still focusing on strong coding fundamentals, reviewing code carefully, and improving systems through debugging and iteration.
+  Lately I’ve been building multi-agent systems, a Kubernetes operator for GPU benchmarking, and backend platforms that integrate LLMs into real workflows, and contributing to open source projects like vLLM, DSPy, prime-rl, and LangChain Deep Agents. I enjoy working across the stack - designing APIs, building data pipelines, and making systems reliable once they move beyond prototypes and into production. I also actively use modern AI development tools to speed up repetitive work, while still focusing on strong coding fundamentals, reviewing code carefully, and improving systems through debugging and iteration.
 </p>
 
 <p className="text-base text-white leading-relaxed text-justify">
-  Outside of my projects, I teach three lab sections as a TA for about 55 undergraduate biology students. Working with students from very different backgrounds has made me more adaptable and a much better communicator. I enjoy collaborating with teams, solving messy technical problems, and continuously learning new technologies as systems and tools evolve.
+  Outside of my projects, I TAed three lab sections for about 55 undergraduate biology students at CU Boulder. Working with students from very different backgrounds has made me more adaptable and a much better communicator. I enjoy collaborating with teams, solving messy technical problems, and continuously learning new technologies as systems and tools evolve.
 </p>
 
             </div>
@@ -89,25 +89,49 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
 
             <div>
               <h3 className="text-base font-medium text-white">
-                Teaching Assistant – Lab Systems
+                Software Development Intern – Backend Platform
               </h3>
               <p className="text-sm text-white font-mono mb-2">
-                University of Colorado Boulder • 2026–Present
+                EcoServants • Remote • Aug 2026 – Present
               </p>
               <p className="text-sm text-white leading-relaxed text-justify">
-                Managed the end-to-end execution of 3 laboratory sections serving 50+ students, troubleshooting live technical issues and ensuring smooth operation of lab workflows. Applied data analysis in R to identify recurring failure patterns and improve lab processes. Regularly communicated complex scientific and technical concepts to students from diverse backgrounds, strengthening clarity, adaptability, and real-time problem-solving skills.
+                Building backend features on an environmental nonprofit's PHP/MySQL platform with coding agents, gating every agent-written patch behind mutation testing that caught 13 of 13 injected faults across 310+ automated checks. Owned proposal autosave with versioned MySQL revisions and HMAC-signed unsubscribe tokens, and validated a classifier that sorts errors into 7 categories, so retryable ones no longer fail permanently.
               </p>
             </div>
 
             <div>
               <h3 className="text-base font-medium text-white">
-                Graduate Researcher – Distributed ML Systems
+                Open Source Contributor – AI & ML Infrastructure
+              </h3>
+              <p className="text-sm text-white font-mono mb-2">
+                vLLM • DSPy • prime-rl • LangChain Deep Agents • 2026 – Present
+              </p>
+              <p className="text-sm text-white leading-relaxed text-justify">
+                Contributing fixes to LLM serving, prompt-programming, and RL-training codebases: a vLLM frontend bugfix for run-batch request validation, a DSPy XMLAdapter fix for reading lists back correctly, a prime-rl trainer fix for RL step loss logging, and a reproducible CRLF line-ending bug report for Deep Agents.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-base font-medium text-white">
+                Teaching Assistant – Lab Systems
+              </h3>
+              <p className="text-sm text-white font-mono mb-2">
+                University of Colorado Boulder • Jan 2026 – May 2026
+              </p>
+              <p className="text-sm text-white leading-relaxed text-justify">
+                Managed the end-to-end execution of 3 laboratory sections serving 55+ students, troubleshooting live technical issues and ensuring smooth operation of lab workflows. Applied data analysis in R to identify recurring failure patterns and improve lab processes. Regularly communicated complex scientific and technical concepts to students from diverse backgrounds, strengthening clarity, adaptability, and real-time problem-solving skills.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-base font-medium text-white">
+                Graduate Researcher – Distributed Systems & Infrastructure
               </h3>
               <p className="text-sm text-white font-mono mb-2">
                 BioFrontiers Institute, University of Colorado Boulder • 2025–2026
               </p>
               <p className="text-sm text-white leading-relaxed text-justify">
-                Worked on computational systems supporting biological research in the Peleg Lab, building distributed ML pipelines for large-scale image analysis. Increased model evaluation throughput by 35% by engineering parallel training and inference pipelines in Python/PyTorch on GPU-backed GCP environments. Accelerated experimentation cycles by 40% by designing containerized CUDA-enabled training environments with Docker and CI/CD, enabling reproducible large-scale experiments across heterogeneous compute systems. Contributed to debugging and performance optimization of ML workloads, improving reliability of long-running GPU jobs.
+                Architected distributed AI inference pipelines in Python and multithreaded C++ across multinode Linux GPU clusters on GCP, overlapping data staging with compute to lift evaluation throughput 35% and reclaim 400+ GPU hours per release cycle. Containerized vLLM inference on Kubernetes with test-gated rollouts, running 300+ sweeps with zero failures, and isolated concurrency faults in C++ inference workers with GDB and Valgrind, shrinking failure diagnosis time 40%.
               </p>
             </div>
 
@@ -119,19 +143,19 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
                 CodeClause • Bangalore, India • 2024
               </p>
               <p className="text-sm text-white leading-relaxed text-justify">
-                Built and optimized backend services supporting data-driven applications and analytics pipelines. Increased backend throughput by 20% and reduced production latency by optimizing Flask-based REST APIs and SQL queries in high-traffic environments. Reduced release failures by 25% by automating build, test, and deployment pipelines using Jenkins and GitHub CI/CD, improving release reliability. Improved system observability by implementing structured logging, monitoring, and unit testing, decreasing issue diagnosis time by 35% and stabilizing downstream services.
+                Rebuilt REST microservices and their SQL query paths behind connection pooling, index tuning, and async non-blocking I/O, pulling p95 latency from 310ms to 180ms at thousands of requests per day. Hardened API error handling and added Pytest regression suites, cutting bug diagnosis from 40 minutes to 26. Shipped containerized deploys on Jenkins and GitHub Actions, moving release failures from 1 in 6 builds to 1 in 24.
               </p>
             </div>
 
             <div>
               <h3 className="text-base font-medium text-white">
-                Software Engineer Intern – Data Infrastructure
+                Software Engineer Intern – Cloud Infrastructure & Backend
               </h3>
               <p className="text-sm text-white font-mono mb-2">
                 Adflix Media • Pune, India • 2023
               </p>
               <p className="text-sm text-white leading-relaxed text-justify">
-                Worked on data infrastructure supporting analytics workflows processing 5M+ records daily. Scaled SQL-driven ETL pipelines using Dockerized services, ensuring consistent batch performance and low operational overhead. Improved system visibility by building Grafana monitoring dashboards tracking pipeline latency and throughput, reducing issue detection time by 30%. Decreased production recovery time by 25% through structured logging and cloud monitoring improvements across distributed data pipelines.
+                Scaled Kafka consumers and Spark ETL jobs across Dockerized AWS services, landing 5M+ records daily into warehouse tables with offset tracking and idempotent writes that ended manual reprocessing. Wired Prometheus and Grafana alerts on throughput and consumer lag, holding p99 lag under 90 seconds at peak, and trimmed recovery time 27% by routing each alert to its owning service with a linked runbook.
               </p>
             </div>
 
@@ -160,7 +184,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
                 Programming Languages
               </h3>
               <p className="text-sm text-white leading-relaxed">
-                Python, C/C++, Java, Go, JavaScript (ES6+), TypeScript, SQL, Bash, R
+                Python, C++, Go, C, TypeScript, JavaScript (ES6+), Java, SQL, Bash, R
               </p>
             </div>
             <div>
@@ -168,7 +192,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
                 AI / Machine Learning Systems
               </h3>
               <p className="text-sm text-white leading-relaxed">
-                PyTorch, TensorFlow, Hugging Face Transformers, RAG Pipelines, Graph-Augmented Retrieval, Multi-Agent Architectures, LangChain, Dify, vLLM, Ollama, Amazon Bedrock, Embedding Models, Vector Search (Qdrant), Fine-Tuning (LoRA / QLoRA), Model Evaluation, Inference Pipelines
+                PyTorch, TensorFlow, Hugging Face Transformers, vLLM, TensorRT, Speculative Decoding, Continuous Batching, KV Cache, Quantization, Latency Benchmarking, LangGraph, LangChain, DSPy, RAG Pipelines, LLM-as-Judge Evals, Langfuse, Reinforcement Learning (PPO, GRPO), Vector Search (Qdrant), Fine-Tuning (LoRA / QLoRA), Ollama, Amazon Bedrock
               </p>
             </div>
             <div>
@@ -176,7 +200,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
                 Distributed Systems & Backend
               </h3>
               <p className="text-sm text-white leading-relaxed">
-                REST APIs, Microservices, Async/Event-Driven Systems, Flask, FastAPI, Spring Boot, Node.js, Streaming Pipelines, Real-Time Inference Systems, Static Analysis Systems, Graph Processing Workflows
+                REST APIs, Microservices, Async/Event-Driven Systems, FastAPI, Flask, Spring Boot, Node.js, Apache Kafka, Apache Spark, Streaming Pipelines, Multithreaded C++, Graph Processing Workflows
               </p>
             </div>
             <div>
@@ -184,7 +208,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
                 Data & Databases
               </h3>
               <p className="text-sm text-white leading-relaxed">
-                PostgreSQL, MongoDB, DynamoDB, ETL Pipelines, Data Processing Pipelines, Vector Databases (Qdrant), Query Optimization
+                PostgreSQL, MySQL, Neo4j, Redis, MongoDB, DynamoDB, ETL Pipelines, Vector Databases (Qdrant), Query Optimization
               </p>
             </div>
             <div>
@@ -192,7 +216,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
                 Cloud, Infrastructure & DevOps
               </h3>
               <p className="text-sm text-white leading-relaxed">
-                Docker, CI/CD, Git, Linux, AWS (EC2, S3, IAM, Lambda, Bedrock), GCP (Compute Engine, Cloud Run, Vertex AI), GPU Workloads, CUDA-accelerated training environments
+                Kubernetes, Kubebuilder, Helm, Docker, Prometheus, Grafana, OpenTelemetry, CI/CD, Linux, AWS (EC2, S3, IAM, Lambda, Bedrock), GCP (Compute Engine, Cloud Run, Vertex AI), CUDA, Nsight Systems, GDB, Valgrind
               </p>
             </div>
             <div>

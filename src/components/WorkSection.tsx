@@ -7,6 +7,25 @@ interface WorkSectionProps {
 
 const experience = [
   {
+    title: 'Software Development Intern, Backend Platform',
+    org: 'EcoServants · Remote',
+    period: 'Aug 2026 – Present',
+    bullets: [
+      "Built backend features across an environmental nonprofit's PHP/MySQL platform with coding agents, gating every agent-written patch behind mutation testing that caught 13 of 13 injected faults across 310+ automated checks.",
+      "Owned proposal autosave with versioned MySQL revisions and HMAC-signed unsubscribe tokens, rechecking state under the queue worker's lock so no draft is lost and no race slips through.",
+      'Validated a classifier that sorts errors into 7 categories, so retryable ones no longer fail permanently.',
+    ],
+  },
+  {
+    title: 'Open Source Contributor, AI & ML Infrastructure',
+    org: 'vLLM · DSPy (Stanford NLP) · Prime Intellect prime-rl · LangChain Deep Agents',
+    period: '2026 – Present',
+    bullets: [
+      'Opened pull requests across LLM serving, prompt-programming, and RL-training codebases, including a vLLM frontend bugfix for run-batch request validation and a prime-rl trainer fix for RL step loss logging.',
+      'Fixed XMLAdapter list round-tripping for untyped outputs in DSPy and filed a reproducible CRLF line-ending bug against Deep Agents.',
+    ],
+  },
+  {
     title: 'Graduate Teaching Assistant, Lab Systems',
     org: 'University of Colorado Boulder · Boulder, CO',
     period: 'Jan 2026 – May 2026',
@@ -16,13 +35,15 @@ const experience = [
     ],
   },
   {
-    title: 'Graduate Researcher, Distributed Systems Engineering',
+    title: 'Graduate Researcher, Distributed Systems & Infrastructure',
     org: 'Peleg Lab, BioFrontiers Institute · Boulder, CO',
     period: 'Aug 2025 – Jan 2026',
     bullets: [
-      'Increased evaluation throughput by 35% and eliminated hundreds of GPU-hours per cycle by architecting parallel AI pipelines in Python/C++ on GCP, enabling scalable distributed experimentation.',
-      'Built containerized GPU-backed environments to improve reproducibility, orchestration, and reliability for large-scale AI workloads.',
-      'Reduced failure diagnosis time by 40% through GDB/Valgrind debugging and performance profiling, improving fault isolation and system stability.',
+      'Architected distributed AI inference pipelines in Python and multithreaded C++ across multinode Linux GPU clusters on GCP, overlapping data staging with compute to lift evaluation throughput 35% and reclaim 400+ GPU hours per release cycle.',
+      'Containerized vLLM inference on Kubernetes with test-gated rollouts, running 300+ sweeps with zero failures.',
+      'Isolated concurrency faults in C++ inference workers with GDB and Valgrind, shrinking failure diagnosis time 40%.',
+      'Profiled kernel launch and data transfer stalls with Nsight Systems, cutting a 9 hour training run to 3.5 hours.',
+      'Engineered PyTorch fine-tuning for Cellpose on biologist annotations, lifting instance F1 from 0.71 to 0.89.',
     ],
   },
   {
@@ -30,22 +51,23 @@ const experience = [
     org: 'CodeClause · Bangalore, India',
     period: 'June 2024 – July 2024',
     bullets: [
-      'Increased backend throughput by 20% and reduced API latency by optimizing Flask REST services, SQL queries, and request workflows, supporting thousands of daily requests across concurrent workloads.',
-      'Reduced release failures by 25% through enhancing CI/CD pipelines with Jenkins, GitHub, and containerized deployments.',
-      'Decreased issue diagnosis time by 35% through implementing unit testing, structured logging, monitoring, and API debugging, strengthening observability and production stability.',
+      'Rebuilt REST microservices and their SQL query paths behind connection pooling, index tuning, and async non-blocking I/O, pulling p95 latency from 310ms to 180ms at thousands of requests per day.',
+      'Hardened API error handling and added Pytest regression suites, cutting bug diagnosis from 40 minutes to 26.',
+      'Shipped containerized deploys on Jenkins and GitHub Actions, moving release failures from 1 in 6 builds to 1 in 24.',
     ],
   },
   {
-    title: 'Software Engineer Intern, Big Data Infrastructure',
+    title: 'Software Engineer Intern, Cloud Infrastructure & Backend',
     org: 'Adflix Media · Pune, India',
     period: 'Apr 2023 – Sep 2023',
     bullets: [
-      'Processed 5M+ records daily by scaling SQL-driven ETL pipelines and Dockerized microservices, improving throughput, reliability, and service communication across distributed cloud workloads.',
-      'Reduced issue detection time by 30% through building Grafana dashboards for latency, throughput, infrastructure, and network monitoring.',
-      'Cut recovery time by 25% by implementing structured logging, cloud monitoring, automated alerting, and access-controlled operational workflows.',
+      'Scaled Kafka consumers and Spark ETL jobs across Dockerized AWS services, landing 5M+ records daily into warehouse tables with offset tracking and idempotent writes that ended manual reprocessing.',
+      'Wired Prometheus and Grafana alerts on throughput and consumer lag, holding p99 lag under 90 seconds at peak.',
+      'Trimmed recovery time 27% by routing each alert to its owning service with a linked runbook.',
     ],
   },
 ];
+
 
 const WorkSection = ({ onSectionChange }: WorkSectionProps) => {
   const [activeTab, setActiveTab] = useState<'projects' | 'experience' | 'education'>('projects');

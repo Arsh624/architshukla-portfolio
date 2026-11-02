@@ -16,15 +16,33 @@ interface Project {
 const projects: Project[] = [
   {
     id: 11,
-    title: "Multi-Agent Relationship Intelligence Platform",
+    title: "Kith – Multi-Agent AI Platform",
     date: "2026",
     role: "AI Engineering / Full Stack",
-    description: "Multimodal relationship intelligence platform that automatically extracts, enriches, and organizes contacts into a dynamic knowledge graph.",
+    description: "Multi-agent relationship intelligence platform that extracts, enriches, and organizes contacts into a live knowledge graph, served through a provider-agnostic inference gateway.",
     highlights: [
-      "Built a multimodal pipeline extracting and organizing 1,000+ entities from emails, documents, business cards, and meeting notes into a live knowledge graph.",
-      "Designed LangGraph-based multi-agent workflows for contact extraction, relationship mapping, follow-up generation, and contextual retrieval, reducing manual networking effort by 80%.",
-      "Engineered JWT-secured FastAPI services backed by PostgreSQL, Neo4j, and Qdrant, implementing RAG, vector search, and agent observability pipelines deployed with Docker and AWS.",
+      "Built a multimodal pipeline extracting and organizing 1,000+ entities from emails, documents, business cards, and meeting notes into a live Neo4j knowledge graph, with LangGraph agents for contact extraction, relationship mapping, and follow-up generation.",
+      "Delivered a provider-agnostic inference gateway in async FastAPI fronting hosted APIs and a local vLLM endpoint, with a Redis token-bucket rate limiter and circuit breaker that completed 99.2% of agent runs during simulated provider outages.",
+      "Benchmarked speculative decoding in vLLM, pairing a small draft model with an 8B target on the same prompts, lifting decode throughput 2.2x over standard decoding.",
+      "Raised extraction F1 from 0.74 to 0.91 by adding Langfuse tracing and an LLM-judge eval harness to every LangGraph node, catching retrieval regressions before deploy.",
+      "Shipped a React and TypeScript workspace behind JWT auth, with tool calling and RAG over Qdrant, backed by PostgreSQL and deployed with Docker on AWS.",
     ],
+    githubUrl: "https://github.com/Arsh624/Kith-Multi-Agent-Relationship-Intelligence-Platform",
+  },
+  {
+    id: 12,
+    title: "Kube-Op-Lite – GPU Benchmark & Workload Operator",
+    date: "2026",
+    role: "Cloud-Native Infrastructure / GPU Systems",
+    description: "Kubernetes operator in Go that keeps GPU workloads at desired state and benchmarks them with baseline regression analysis.",
+    highlights: [
+      "Designed a Kubernetes operator in Go with Kubebuilder, defining a GpuWorkload CRD and an idempotent reconciliation loop that detects drift and restores failed GPU pods to desired state in under 30 seconds with no manual action.",
+      "Enforced rollout safety with validating and defaulting admission webhooks plus a Helm chart, rejecting replicas under 1, empty images, and GPU counts over 8, and cut cluster bring-up from 45 minutes to 8.",
+      "Added a BenchmarkRun CRD with GPU telemetry and baseline analysis, catching 17 of 20 injected regressions with no false alarms on clean runs.",
+      "Traced thermal throttling on a laptop GPU across 42 runs with a telemetry sidecar sampling clocks, temperature, and power every second.",
+      "Exported reconcile latency and workqueue depth as Prometheus metrics with alert rules on stuck loops.",
+    ],
+    githubUrl: "https://github.com/Arsh624/kube-op-lite",
   },
   {
     id: 1,
@@ -49,11 +67,11 @@ const projects: Project[] = [
     date: "2026",
     role: "Reinforcement Learning / ML Systems",
     description:
-      "Multi-agent reinforcement learning framework adapting to different market regimes.",
+      "Multi-agent reinforcement learning framework that routes between specialist PPO agents by market regime.",
     highlights: [
-      "Regime-aware reinforcement learning framework utilizing specialized PPO agents for bull, bear, and volatile market conditions.",
-      "Dynamic policy switching based on statistical regime detection using volatility clustering and rolling features.",
-      "Improved risk-adjusted performance by leveraging multi-agent architectures for specialized strategy execution."
+      "Built three specialist PPO agents for calm, shaky, and crisis markets, each trained with a regime-specific reward (Sortino, Differential Sharpe, risk parity), routed each day by a 3-state HMM regime detector.",
+      "Raised Sharpe from 0.82 to 1.17 and cut max drawdown from 40.2% to 16.1% on 2018–2021 sector-ETF test data, and COVID-crash loss from 29.4% to 6.6%.",
+      "Owned the full RL side: Gymnasium environment, reproduction of a published single-agent baseline (Sharpe 0.82 vs 0.83), reward design, and the router. Built with a teammate who built the HMM regime detector.",
     ],
     githubUrl: "https://github.com/Arsh624/Regime-switching-RL-model-for-Portfolio-Optimization",
   },
@@ -74,16 +92,16 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "RepoGraph V2 – Distributed Debugging Platform",
+    title: "RepoGraph V2 – Flaky Test Localization & Repair",
     url: undefined,
     date: "2025",
-    role: "Distributed Systems / Backend",
+    role: "Distributed Systems / LLM Agents",
     description:
-      "Graph-based distributed system to localize flaky tests across large repositories.",
+      "Graph-based distributed system that localizes flaky tests across large repositories and repairs them with LLM agents.",
     highlights: [
-      "Distributed debugging platform using graph closures to analyze dependency graphs and shared state across 100K+ LOC repositories.",
-      "Coordinated patching and verification workflows supported by versioned REST APIs for large-scale analysis.",
-      "Optimized graph-scoped retrieval to significantly reduce inter-service data movement and improve concurrent pipeline throughput."
+      "Modeled a distributed Python and C++ backend on Linux that builds call and dependency graphs over 100K+ LOC repositories, localizing order-dependent flaky tests caused by shared state under multiprocess load.",
+      "Slashed inter-service data transfer 70–85% by scoping retrieval to each call graph and switching to a tighter serialization format.",
+      "Launched a three-agent localize, patch, verify loop over real open source repositories that accepts a fix only after 20 randomized test runs.",
     ],
     githubUrl: "https://github.com/Arsh624/Repograph-V2",
   },

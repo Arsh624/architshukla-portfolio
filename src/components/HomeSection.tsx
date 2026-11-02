@@ -50,7 +50,7 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
               Archit Shukla
             </h1>
             <p className="text-lg text-white stagger-in">
-              Machine Learning Engineer & Software Developer
+              AI Infrastructure & Machine Learning Engineer
             </p>
           </div>
 
