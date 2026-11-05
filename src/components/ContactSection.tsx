@@ -92,7 +92,7 @@ const ContactSection = ({ onSectionChange }: ContactSectionProps) => {
           <div>
             <h3 className="text-xs font-medium text-white/50 mb-3 uppercase tracking-widest">About Me</h3>
             <p className="text-sm text-white/80 leading-relaxed text-justify">
-              CS grad from CU Boulder, fully authorized to work in the US. I build at the intersection of backend engineering, distributed systems, and practical AI. Most of my recent work is around LLM inference, multi-agent pipelines, and Kubernetes and backend platforms that hold up once they leave prototype stage, plus open source contributions to vLLM, DSPy, and prime-rl.
+              CS grad from CU Boulder, fully authorized to work in the US. I build at the intersection of backend engineering, distributed systems, and practical AI. Most of my recent work is around LLM inference, multi-agent pipelines, and Kubernetes and backend platforms that hold up once they leave prototype stage, plus open source contributions to sqlfluff, prime-rl, vLLM, and DSPy.
             </p>
             <p className="text-sm text-white/80 leading-relaxed text-justify mt-3">
               I genuinely enjoy customer-facing work and roles where I get to collaborate with new teams and people regularly. Whether it is translating technical ideas to non-technical stakeholders or figuring out what users actually need, that side of the job energizes me just as much as the code.

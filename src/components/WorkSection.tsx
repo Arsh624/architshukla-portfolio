@@ -18,11 +18,12 @@ const experience = [
   },
   {
     title: 'Open Source Contributor, AI & ML Infrastructure',
-    org: 'vLLM · DSPy (Stanford NLP) · Prime Intellect prime-rl · LangChain Deep Agents',
+    org: 'sqlfluff · prime-rl · vLLM · DSPy · docling-core · LangChain Deep Agents',
     period: '2026 – Present',
     bullets: [
-      'Opened pull requests across LLM serving, prompt-programming, and RL-training codebases, including a vLLM frontend bugfix for run-batch request validation and a prime-rl trainer fix for RL step loss logging.',
-      'Fixed XMLAdapter list round-tripping for untyped outputs in DSPy and filed a reproducible CRLF line-ending bug against Deep Agents.',
+      'Active in six open source repos, with fixes merged into sqlfluff (LT01 no longer joins two words when removing whitespace) and prime-rl (skip NUMA binding when the GPU has no sysfs numa_node, found on WSL2).',
+      'Opened pull requests across LLM serving, prompt-programming, RL-training, and document-processing codebases: a vLLM frontend bugfix for run-batch request validation, a prime-rl trainer fix for RL step loss logging, a DSPy XMLAdapter list round-tripping fix, and a docling-core WebVTT fix for whitespace-only lines.',
+      'Filed reproducible bug reports against Deep Agents, including CRLF line endings being rewritten to LF and a Windows startup failure.',
     ],
   },
   {

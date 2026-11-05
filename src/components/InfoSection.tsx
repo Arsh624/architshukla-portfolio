@@ -41,7 +41,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
 </p>
 
 <p className="text-base text-white leading-relaxed mb-6 text-justify">
-  Lately I’ve been building multi-agent systems, a Kubernetes operator for GPU benchmarking, and backend platforms that integrate LLMs into real workflows, and contributing to open source projects like vLLM, DSPy, prime-rl, and LangChain Deep Agents. I enjoy working across the stack - designing APIs, building data pipelines, and making systems reliable once they move beyond prototypes and into production. I also actively use modern AI development tools to speed up repetitive work, while still focusing on strong coding fundamentals, reviewing code carefully, and improving systems through debugging and iteration.
+  Lately I’ve been building multi-agent systems, a Kubernetes operator for GPU benchmarking, and backend platforms that integrate LLMs into real workflows, and contributing to open source projects like sqlfluff, prime-rl, vLLM, DSPy, and LangChain Deep Agents. I enjoy working across the stack - designing APIs, building data pipelines, and making systems reliable once they move beyond prototypes and into production. I also actively use modern AI development tools to speed up repetitive work, while still focusing on strong coding fundamentals, reviewing code carefully, and improving systems through debugging and iteration.
 </p>
 
 <p className="text-base text-white leading-relaxed text-justify">
@@ -104,10 +104,10 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
                 Open Source Contributor – AI & ML Infrastructure
               </h3>
               <p className="text-sm text-white font-mono mb-2">
-                vLLM • DSPy • prime-rl • LangChain Deep Agents • 2026 – Present
+                sqlfluff • prime-rl • vLLM • DSPy • docling-core • LangChain Deep Agents • 2026 – Present
               </p>
               <p className="text-sm text-white leading-relaxed text-justify">
-                Contributing fixes to LLM serving, prompt-programming, and RL-training codebases: a vLLM frontend bugfix for run-batch request validation, a DSPy XMLAdapter fix for reading lists back correctly, a prime-rl trainer fix for RL step loss logging, and a reproducible CRLF line-ending bug report for Deep Agents.
+                Active in six open source repos, with fixes merged into sqlfluff and prime-rl (a NUMA binding fix for GPUs without a sysfs numa_node). Also opened pull requests for vLLM run-batch request validation, a DSPy XMLAdapter list fix, a prime-rl trainer loss logging fix, and a docling-core WebVTT fix, plus reproducible bug reports for Deep Agents.
               </p>
             </div>
 
