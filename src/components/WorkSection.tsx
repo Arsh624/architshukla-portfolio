@@ -21,9 +21,9 @@ const experience = [
     org: 'sqlfluff · prime-rl · vLLM · DSPy · docling-core · LangChain Deep Agents',
     period: '2026 – Present',
     bullets: [
-      'Active in six open source repos, with fixes merged into sqlfluff (LT01 no longer joins two words when removing whitespace) and prime-rl (skip NUMA binding when the GPU has no sysfs numa_node, found on WSL2).',
-      'Opened pull requests across LLM serving, prompt-programming, RL-training, and document-processing codebases: a vLLM frontend bugfix for run-batch request validation, a prime-rl trainer fix for RL step loss logging, a DSPy XMLAdapter list round-tripping fix, and a docling-core WebVTT fix for whitespace-only lines.',
-      'Filed reproducible bug reports against Deep Agents, including CRLF line endings being rewritten to LF and a Windows startup failure.',
+      'Active in six open source repos, with fixes merged into sqlfluff (LT01 no longer joins two words when removing whitespace), prime-rl (skip NUMA binding when the GPU has no sysfs numa_node, found on WSL2), and LangChain Deep Agents (two Windows fixes: dcode failed to start because of server log colors, and its editor shortcut could not find launchers like code.cmd).',
+      'Opened pull requests across LLM serving, prompt-programming, RL-training, SQL tooling, and document-processing codebases: two vLLM bugfixes (run-batch request validation, and thinking_token_budget turning reasoning off when an earlier message quotes a think tag), a prime-rl trainer fix for RL step loss logging, a DSPy XMLAdapter list round-tripping fix, a second sqlfluff LT01 fix for SparkSQL and Databricks named parameters, and a docling-core WebVTT fix for whitespace-only lines.',
+      'Filed reproducible bug reports against Deep Agents, including CRLF line endings being rewritten to LF.',
     ],
   },
   {
