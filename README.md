@@ -2,9 +2,11 @@
 
 ## Overview
 
-This is a single-page developer portfolio that showcases my dual-specialization: **Software Engineering** and **Machine Learning Engineering**. It offers a clean, immersive interface built with modern web technologies and creative UI/UX patterns.
+Personal portfolio for Archit Shukla, an AI infrastructure and machine learning engineer (M.S. Computer Science, CU Boulder). It covers work experience, open source contributions (vLLM, LangChain Deep Agents, sqlfluff, prime-rl, DSPy, Docling) and projects such as Kith, Kube-Op-Lite and RepoGraph V2.
 
-The portfolio includes animated transitions, a dual-resume viewer, project popups with GitHub/demo links, and a smooth user experience across devices.
+Live site: https://architshukla-portfolio.vercel.app
+
+The site includes animated transitions, a resume viewer, project popups with GitHub and demo links, and a responsive layout.
 
 ---
 
