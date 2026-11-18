@@ -32,6 +32,22 @@ const projects: Project[] = [
     githubUrl: "https://github.com/Arsh624/Kith-Multi-Agent-Relationship-Intelligence-Platform",
   },
   {
+    id: 13,
+    title: "agentwall – Local Firewall for AI Agents",
+    previewImage: "/projects/agentwall.png",
+    date: "2026",
+    role: "AI Security / Agent Infrastructure",
+    description: "One Go binary that sits between an AI agent (Claude Code, Cursor) and its MCP servers, checks every tool call and answer, and blocks calls that would leak private data.",
+    highlights: [
+      "Built information-flow control for MCP sessions: tools are tagged as untrusted sources, private sources or egress sinks, and a session that has read both untrusted and private data cannot call an egress tool, across all of one agent's servers.",
+      "Blocked 5 of 5 scripted attacks with 0 false positives on 4 benign sessions, including a replay of the GitHub MCP data heist, secret exfiltration through fetch, tool rug pulls, zero-width injection and cross-session leaks, and verified the block in a real Claude Code session.",
+      "Fingerprinted private tool output in 8-word windows so pasting that text into an egress call is blocked, even in a later session.",
+      "Kept secrets out of agent configs with a credential broker backed by the OS keychain or an AES-256-GCM vault, redacting secrets in tool output (including base64 and percent-encoded forms), and pinned tool definitions to catch rug pulls.",
+      "Added about 0.2 ms at p99 per tool call for 1 KB payloads, with a hash-chained audit log, CI on Linux, macOS and Windows, and checksummed release binaries (v0.1.1).",
+    ],
+    githubUrl: "https://github.com/Arsh624/agentwall",
+  },
+  {
     id: 12,
     title: "Kube-Op-Lite – GPU Benchmark & Workload Operator",
     date: "2026",

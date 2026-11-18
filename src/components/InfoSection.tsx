@@ -41,7 +41,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
 </p>
 
 <p className="text-base text-white leading-relaxed mb-6 text-justify">
-  Lately I’ve been building multi-agent systems, a Kubernetes operator for GPU benchmarking, and backend platforms that integrate LLMs into real workflows, and contributing to open source projects like vLLM, LangChain Deep Agents, sqlfluff, prime-rl, and Docling, with fixes merged in all five. I enjoy working across the stack - designing APIs, building data pipelines, and making systems reliable once they move beyond prototypes and into production. I also actively use modern AI development tools to speed up repetitive work, while still focusing on strong coding fundamentals, reviewing code carefully, and improving systems through debugging and iteration.
+  Lately I’ve been building multi-agent systems, agentwall (a firewall that stops prompt-injected AI agents from leaking private data), a Kubernetes operator for GPU benchmarking, and backend platforms that integrate LLMs into real workflows, and contributing to open source projects like vLLM, LangChain Deep Agents, sqlfluff, prime-rl, and Docling, with fixes merged in all five. I enjoy working across the stack - designing APIs, building data pipelines, and making systems reliable once they move beyond prototypes and into production. I also actively use modern AI development tools to speed up repetitive work, while still focusing on strong coding fundamentals, reviewing code carefully, and improving systems through debugging and iteration.
 </p>
 
 <p className="text-base text-white leading-relaxed text-justify">
@@ -107,7 +107,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
                 vLLM • LangChain Deep Agents • sqlfluff • prime-rl • Docling • DSPy • 2026 – Present
               </p>
               <p className="text-sm text-white leading-relaxed text-justify">
-                Active in six open source repos, with fixes merged into five: vLLM (run-batch request validation), LangChain Deep Agents (two Windows fixes), sqlfluff, prime-rl (a NUMA binding fix for GPUs without a sysfs numa_node), and Docling (a WebVTT fix). Open pull requests include two more vLLM bugfixes, a Deep Agents Windows path fix, two more Docling WebVTT fixes, a DSPy XMLAdapter list fix, and a prime-rl trainer loss logging fix.
+                Active in six open source repos, with fixes merged into five: vLLM (run-batch request validation), LangChain Deep Agents (two Windows fixes), sqlfluff, prime-rl (a NUMA binding fix for GPUs without a sysfs numa_node), and Docling (a WebVTT fix). Open pull requests include two more vLLM bugfixes, two more Docling WebVTT fixes, a DSPy XMLAdapter list fix, and a prime-rl trainer loss logging fix.
               </p>
             </div>
 
