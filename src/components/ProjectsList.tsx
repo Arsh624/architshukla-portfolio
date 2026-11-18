@@ -48,6 +48,22 @@ const projects: Project[] = [
     githubUrl: "https://github.com/Arsh624/agentwall",
   },
   {
+    id: 14,
+    title: "ROS 2 GPU Point Cloud – CUDA Perception Filter",
+    previewImage: "/projects/ros2-pointcloud.png",
+    date: "2026",
+    role: "GPU Systems / Robotics Perception",
+    description: "ROS 2 Jazzy node that range-filters and voxel-downsamples point clouds on the CPU (single-threaded or OpenMP) or on an NVIDIA GPU (CUDA + CUB), with identical output from every backend.",
+    highlights: [
+      "Built a CUDA pipeline on CUB (select, radix sort, reduce-by-key) with buffers allocated once and reused every frame, filtering 561 million input points/s end to end at 1280x720, 8.68x single-threaded PCL VoxelGrid.",
+      "Inside the running node at 1280x720 and 30 Hz, CUDA takes 3.48 ms per frame on 0.96 CPU cores, against 5.10 ms on 6.14 cores for the fastest OpenMP setting.",
+      "Profiled the CUDA stages, found the host-to-device copy was the largest, and removed a staging copy, cutting the 1280x720 end-to-end time from 2.356 ms to 1.641 ms.",
+      "Traced a 10 Hz latency tail to GPU idle clocks: after 100 ms idle, a 1280x720 call takes 6.96 ms instead of 1.49 ms.",
+      "Measured transport across containers: Fast DDS with defaults dropped 37.4% of 3.7 MB clouds at 10 Hz while Zenoh dropped none, and verified every backend returns the same voxel count with centroids within 1e-4 m.",
+    ],
+    githubUrl: "https://github.com/Arsh624/ros2-gpu-pointcloud",
+  },
+  {
     id: 12,
     title: "Kube-Op-Lite – GPU Benchmark & Workload Operator",
     date: "2026",
