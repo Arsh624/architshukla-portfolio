@@ -107,7 +107,7 @@ const InfoSection = ({ onSectionChange }: InfoSectionProps) => {
                 vLLM • LangChain Deep Agents • sqlfluff • prime-rl • Docling • DSPy • 2026 – Present
               </p>
               <p className="text-sm text-white leading-relaxed text-justify">
-                Active in six open source repos, with fixes merged into five: vLLM (run-batch request validation), LangChain Deep Agents (two Windows fixes), sqlfluff, prime-rl (a NUMA binding fix for GPUs without a sysfs numa_node), and Docling (a WebVTT fix). Open pull requests include two more vLLM bugfixes, two more Docling WebVTT fixes, a DSPy XMLAdapter list fix, and a prime-rl trainer loss logging fix.
+                Active in six open source repos, with fixes merged into five: vLLM (run-batch request validation, and NumPy image support in its multimodal processors), LangChain Deep Agents (two Windows fixes), sqlfluff, prime-rl (a NUMA binding fix for GPUs without a sysfs numa_node), and Docling (a WebVTT fix). Open pull requests include two more vLLM bugfixes, two more Docling WebVTT fixes, a DSPy XMLAdapter list fix, and a prime-rl trainer loss logging fix.
               </p>
             </div>
 
